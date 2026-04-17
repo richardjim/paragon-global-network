@@ -167,9 +167,37 @@ export default function HomePage() {
                     height: "100%", display: "flex", flexDirection: "column",
                   }}
                 >
-                  <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 16 }}>
-                    <span style={{ fontSize: 36 }}>{c.icon}</span>
-                    <span style={{ background: hoveredCard === i ? "rgba(38,166,154,.14)" : "rgba(0,137,123,.07)", borderRadius: 100, padding: "3px 12px", fontFamily: "var(--body)", fontSize: 10, fontWeight: 700, color: brand.tealBright }}>{c.tag}</span>
+                  <div style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    marginBottom: 16,
+                    gap: 12,
+                  }}>
+                    <span style={{
+                      fontSize: 36,
+                      lineHeight: 1,
+                      flexShrink: 0,
+                      display: "flex",
+                      alignItems: "center",
+                    }}>
+                      {c.icon}
+                    </span>
+                    <span style={{
+                      background: hoveredCard === i ? "rgba(38,166,154,.14)" : "rgba(0,137,123,.07)",
+                      borderRadius: 100,
+                      padding: "6px 16px",
+                      fontFamily: "var(--body)",
+                      fontSize: 11,
+                      fontWeight: 700,
+                      color: brand.tealBright,
+                      whiteSpace: "nowrap",
+                      flexShrink: 0,
+                      lineHeight: 1,
+                      height: "fit-content",
+                    }}>
+                      {c.tag}
+                    </span>
                   </div>
                   <h3 style={{ fontFamily: "var(--heading)", fontSize: 20, fontWeight: 700, color: hoveredCard === i ? "#fff" : brand.navy, marginBottom: 8, transition: "color .4s" }}>{c.title}</h3>
                   <p style={{ fontFamily: "var(--body)", fontSize: 13, color: hoveredCard === i ? "rgba(255,255,255,.55)" : brand.gray500, lineHeight: 1.65, flex: 1, marginBottom: 22, transition: "color .4s" }}>{c.desc}</p>
